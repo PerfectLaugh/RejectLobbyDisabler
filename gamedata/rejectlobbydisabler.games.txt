@@ -1,0 +1,28 @@
+"Games"
+{
+	"csgo"
+	{
+		"Signatures"
+		{
+			"CBaseServer::IsExclusiveToLobbyConnections"
+			{
+				"library"	"engine"
+				"windows"	"\x8B\x01\x8B\x40\x5C\xFF\xD0\x84\xC0\x75\x2A\xC3"
+				"linux"		"\x55\x89\xE5\x83\xEC\x18\x8B\x45\x08\x8B\x10\x89\x04\x24\xFF\x52\x60\x31\xD2"
+			}
+		}
+		"Offsets"
+		{
+			"SvReservationCookie"
+			{
+				"windows"       "752"
+				"linux"         "748"
+			}
+			"ProcessConnectionlessPacket"
+			{
+				"windows"		"1"
+				"linux"			"2"
+			}
+		}
+	}
+}
