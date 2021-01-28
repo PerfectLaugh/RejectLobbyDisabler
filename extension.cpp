@@ -48,10 +48,10 @@ bool OnProcessConnectionlessPacketPost(void * pkt)
 {
 	g_bIntercept = false;
 	if (g_lPrevCookie == 0) {
-		RETURN_META_VALUE(MRES_IGNORED, nullptr);
+		RETURN_META_VALUE(MRES_IGNORED, false);
 	}
 	*g_pSvReservationCookie = g_lPrevCookie;
-	RETURN_META_VALUE(MRES_IGNORED, nullptr);
+	RETURN_META_VALUE(MRES_IGNORED, false);
 }
 
 bool RejectLobbyDisabler::SDK_OnLoad(char *error, size_t maxlength, bool late)
