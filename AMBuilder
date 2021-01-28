@@ -43,6 +43,10 @@ for sdk_name in Extension.sdks:
   binary.sources.append(netmessages_src_path)
   if os.name == 'nt':
     binary.compiler.postlink.append('legacy_stdio_definitions.lib')
+  else:
+    binary.compiler.defines += [
+      '_GLIBCXX_USE_CXX11_ABI=0',
+    ]
 
   binary.compiler.cxxincludes += [
     os.path.join(sdk.path, 'public', 'engine', 'protobuf'),
